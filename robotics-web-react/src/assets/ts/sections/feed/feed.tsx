@@ -13,6 +13,6 @@ const FeedSection: React.FC<FeedSectionProps> = ({ postUrl, postCaption, postUse
             data-instgrm-captioned
             data-instgrm-permalink={postUrl}
             data-instgrm-version="14"
-        
+        ></blockquote>
     )
 }
