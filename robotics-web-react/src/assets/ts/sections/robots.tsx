@@ -1,6 +1,6 @@
 import React from "react";
 
-const RobotsSection: React.FC = (): React.JSX.Element => {
+const RobotsMain: React.FC = (): React.JSX.Element => {
     return (
         <section className="counter-up-section pt-150 pb-100">
             <div className="container">
@@ -77,4 +77,4 @@ const RobotsSection: React.FC = (): React.JSX.Element => {
     )
 }
 
-export default RobotsSection;
+export default RobotsMain;
