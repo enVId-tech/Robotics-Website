@@ -1,3 +1,6 @@
+import WOW from 'wow.js';
+import tns from './tiny-slider.js';
+import counterUp from './counterup.min.js';
 (function() {
     /*=====================================
     Sticky
@@ -75,7 +78,6 @@
 	// WOW active
     new WOW().init();
 
-    
     //====== counter up 
     var cu = new counterUp({
         start: 0,
