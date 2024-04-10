@@ -1,12 +1,3 @@
-/* eslint-disable no-use-before-define */
-/* eslint-disable no-mixed-operators */
-/* eslint-disable no-sequences */
-/* eslint-disable strict */
-/* eslint-disable no-unused-expressions */
-import tns from 'tiny-slider/src/tiny-slider';
-import WOW from 'wowjs'
-import counterUp from './count-up.min';
-
 (function() {
     /*=====================================
     Sticky
@@ -97,38 +88,29 @@ import counterUp from './count-up.min';
 
     //======== tiny slider
 	var slider = new tns({
-        container: '.pricing-active',
-        slideBy: 'page',
-        autoplay: false,
-        mouseDrag: true,
+		container: '.testimonial-active',
+		slideBy: 'page',
+		autoplay: false,
+		mouseDrag: true,
         gutter: 0,
-        items: 2,
-        nav: false,
-        controls: true,
+        items: 1,
+		nav: true,
+        controls: false,
         controlsText: [
             '<i class="lni lni-chevron-left prev"></i>',
             '<i class="lni lni-chevron-right next"></i>'
-        ],
-        responsive: {
-            0: {
-                items: 1,
-            },
-
-            768: {
-                items: 2,
-            }
-        }
+        ]
     });
 
     //======== tiny slider
-    var slider = new tns({
-        container: '.testimonial-active',
-        slideBy: 'page',
-        autoplay: false,
-        mouseDrag: true,
+	var slider = new tns({
+		container: '.pricing-active',
+		slideBy: 'page',
+		autoplay: false,
+		mouseDrag: true,
         gutter: 0,
         items: 2,
-        nav: false,
+		nav: false,
         controls: true,
         controlsText: [
             '<i class="lni lni-chevron-left prev"></i>',

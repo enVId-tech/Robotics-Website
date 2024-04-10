@@ -1,4 +1,5 @@
 import React from "react";
+import 'wowjs';
 
 const RobotsMain: React.FC = (): React.JSX.Element => {
     return (

@@ -1,10 +1,3 @@
-/* eslint-disable no-lone-blocks */
-/* eslint-disable no-use-before-define */
-/* eslint-disable no-mixed-operators */
-/* eslint-disable no-sequences */
-/* eslint-disable strict */
-/* eslint-disable no-unused-expressions */
-
 var tns = function() {
     var t = window
       , Ai = t.requestAnimationFrame || t.webkitRequestAnimationFrame || t.mozRequestAnimationFrame || t.msRequestAnimationFrame || function(t) {
@@ -1750,5 +1743,3 @@ var tns = function() {
     return $i
 }();
 //# sourceMappingURL=../sourcemaps/tiny-slider.js.map
-
-export default tns;

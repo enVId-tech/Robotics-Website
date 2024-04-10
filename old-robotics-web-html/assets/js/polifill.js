@@ -1,8 +1,3 @@
-/* eslint-disable no-use-before-define */
-/* eslint-disable no-mixed-operators */
-/* eslint-disable no-sequences */
-/* eslint-disable strict */
-/* eslint-disable no-unused-expressions */
 
 !function() {
     "use strict";
