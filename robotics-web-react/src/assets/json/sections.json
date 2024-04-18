@@ -1,0 +1,40 @@
+{
+    "Sections": [
+        {
+            "Heading": "Home",
+            "SubSections": [
+                {
+                    "Title": "We are OA Robotics",
+                    "Description": "We are OA Robotics, a competitive robotics program located in Orange County, California. We are based at Oxford Academy in Cypress, and strive to promote robotics and STEM within our communities. Our teams design, build, run, and manage competitive robots, while learning and teaching the scientific and technical concept behind it. Our students aim to continue the culture of constantly improving and challenging ourselves and the team as a whole."
+                }
+            ]
+        },
+        {
+            "Heading": "About",
+            "SubSections": [
+                {
+                    "Title": "About Our Impact",
+                    "Description": "We aim to create a community in which friends and family can learn and immerse themselves in STEM. We host an annual Girl Powered STEM Day, inviting local K-12 students to our site to learn about STEM, promoting our future Women in STEM Initiative. Additionally, we participate in a district-wide STEAM-A-Palooza, exhibiting our team's yearly work for staff, parents, and students to enjoy. Other engagements within our school site include showing off our robots during Club Rush, rallies, Open House, Back-to-School Nights, and more. Through each event we host or participate in, our team builds a connection with our local community in order to promote STEM in the Anaheim Union High School District and Orange County."
+                },
+                {
+                    
+                }
+            ]
+        },
+        {
+            "Heading": "What We Do"
+        },
+        {
+            "Heading": "Feed"
+        },
+        {
+            "Heading": "Sponsers"
+        },
+        {
+            "Heading": "Our Robots"
+        },
+        {
+            "Heading": "Contact"
+        }
+    ]
+}
