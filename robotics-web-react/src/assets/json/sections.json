@@ -17,12 +17,35 @@
                     "Description": "We aim to create a community in which friends and family can learn and immerse themselves in STEM. We host an annual Girl Powered STEM Day, inviting local K-12 students to our site to learn about STEM, promoting our future Women in STEM Initiative. Additionally, we participate in a district-wide STEAM-A-Palooza, exhibiting our team's yearly work for staff, parents, and students to enjoy. Other engagements within our school site include showing off our robots during Club Rush, rallies, Open House, Back-to-School Nights, and more. Through each event we host or participate in, our team builds a connection with our local community in order to promote STEM in the Anaheim Union High School District and Orange County."
                 },
                 {
-                    
+                    "Title": "Mission Statement",
+                    "Description": "OA Robotics aims to inspire a new generation of engineers, software developers, and business experts by creating a professional environment. Members work together to both create, program, and publicize their created robots centered around certain tasks. Teams across the world operate under the principle of “gracious professionalism,” where teams maintain a competitive environment but still look to help each other compete and improve their robots."
+                },
+                {
+                    "Title": "Our History",
+                    "Description": "In 2009, our first team, Vex Robotics 1774 - Quantum Leap, was started. The following year, Oxford Academy established its OASTEM program. However, it wasn't until 2012 that FIRST Robotics Team 4079 - Quantum Leap was started. Over the last few years, we have begun hosting a FIRST Girl-Powered STEM day, as well as attending our district Steam-A-Palooza. 2019 was our boom year, where we placed as Quarter-Finalists in Worlds (Carver), Finalists in Beach Blitz and the OCR, and Semi-Finalists in Battleship Blast. Recently, we've established an FTC team, meant to introduce robotics and STEM to younger students."
+                },
+                {
+                    "Title": "What is FIRST®?",
+                    "Description": "(For Inspiration and Recognition of Science and Technology) is a non-profit, international organization founded in 1989 by Dean Kamen, an inventor, and entrepreneur.<br /><br />The mission of FIRST® is to inspire young people to be science and technology leaders and innovators by engaging them in exciting mentor-based programs that build science, engineering, and technology skills, inspire innovation, and foster well-rounded life capabilities including self-confidence, communication, and leadership. Each year, FIRST® releases a new game for each program which poses an enormous challenge composed of various tasks. Teams must strategize, design, prototype, build, program, and test their robot during a build season, which lasts for six weeks. After build season, teams compete in regional tournaments to qualify for the world championships, held annually in St. Louis and in Houston."
                 }
             ]
         },
         {
-            "Heading": "What We Do"
+            "Heading": "What We Do",
+            "SubSections": [
+                {
+                    "Title": "Create",
+                    "Description": "We create engaging content on our social media channels to keep our members and community up to date with our projects."
+                },
+                {
+                    "Title": "Build",
+                    "Description": "We build and program competition-ready robots and machines"
+                },
+                {
+                    "Title": "Connect",
+                    "Description": "We connect our team through weekly meetings, bonding events, and competing in FRC!"
+                }
+            ]
         },
         {
             "Heading": "Feed"
