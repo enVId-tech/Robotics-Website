@@ -1,9 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes as Pathhub, Route as Path, Navigate as Redirect } from 'react-router-dom';
 
-// TS / JS
-import './assets/js/main.js';
-
 // SCSS
 import 'bootstrap/dist/css/bootstrap.min.css';
 

@@ -48,16 +48,29 @@
             ]
         },
         {
-            "Heading": "Feed"
+            "Heading": "Feed",
+            "SubSections": [
+                {
+                    "Title": "Instagram"
+                }
+            ]
         },
         {
             "Heading": "Sponsers"
         },
         {
-            "Heading": "Our Robots"
+            "Heading": "Our Robots",
+            "SubSections": [
+
+            ]
         },
         {
-            "Heading": "Contact"
+            "Heading": "Contact",
+            "SubSections": [
+                {
+                    
+                }
+            ]
         }
     ]
 }

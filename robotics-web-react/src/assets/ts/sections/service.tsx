@@ -1,6 +1,14 @@
 import React from "react";
+import Sections from "../../json/sections.json";
+import "../../json/sections.json";
 
 const ServiceSection: React.FC = (): React.JSX.Element => {
+    const [serviceData, setServiceData] = React.useState({});
+
+    React.useEffect(() => {
+        setServiceData(Sections.Sections);
+    }, []);
+
     return (
         <section id="service" className="service-section img-bg pt-100 pb-100 mt-150">
             <div className="container">
