@@ -1,5 +1,6 @@
 import React from 'react'
 import { BrowserRouter as Router, Routes as Pathhub, Route as Path, Navigate as Redirect } from 'react-router-dom'
+import MainPage from './pages';
 
 // SCSS
 
@@ -16,7 +17,7 @@ const RenderPages: React.FC = (): React.JSX.Element => {
                 <Path path="/*" element={<Redirect to="/home" />} />
 
                 {/* Paths */}
-                <Path path="/home" element={<div>Home</div>} />
+                <Path path="/home" element={<MainPage />} />
             </Pathhub>
         </Router>
     )
