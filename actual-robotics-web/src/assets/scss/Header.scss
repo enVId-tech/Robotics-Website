@@ -1,9 +1,15 @@
-#Header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-    background-color: #5d6872;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
-    position: fixed;
+#HeaderMain {
+    position: absolute;
+    width: 100%;
+    z-index: 1000;
+    
+    #Header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+        background-color: #5d6872;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+        position: fixed;
+    }
 }

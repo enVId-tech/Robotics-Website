@@ -1,6 +1,6 @@
 import React from 'react'
 import { BrowserRouter as Router, Routes as Pathhub, Route as Path, Navigate as Redirect } from 'react-router-dom'
-import MainPage from './pages';
+import MainPage from './pages/index.tsx';
 
 // SCSS
 
