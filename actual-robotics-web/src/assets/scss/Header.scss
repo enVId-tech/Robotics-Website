@@ -1,15 +1,14 @@
 #HeaderMain {
-    position: absolute;
-    width: 100%;
+    position: fixed;
+    width: 100vw;
+    height: 10vh;
     z-index: 1000;
+    top: 0;
     
     #Header {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 0 20px;
         background-color: #5d6872;
-        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
-        position: fixed;
     }
 }

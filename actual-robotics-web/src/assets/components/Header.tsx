@@ -8,7 +8,6 @@ const Header: React.FC = (): React.JSX.Element => {
         <nav id="HeaderMain">
             <span id="Header">
                 <img src={img} id="HeaderLogo" alt="Logo" />
-                <h1>Placeholder</h1>
             </span>
         </nav>
     )
