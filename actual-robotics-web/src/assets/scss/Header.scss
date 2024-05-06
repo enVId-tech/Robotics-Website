@@ -10,7 +10,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        background-color: #5d6872;
+        background-color: #ffffff;
 
         #HeaderLogo {
             display: flex;
@@ -39,14 +39,33 @@
                 margin-bottom: 2vh;
                 cursor: pointer;
                 text-decoration: none;
+                animation: 
 
                 h1 {
-                    color: white;
+                    color: black;
                     font-size: 1.5em;
                     margin-left: 1vw;
                     margin-right: 1vw;
                     font-family: "Montserrat", sans-serif;
                     font-weight: 100;
+                }
+            }
+
+            .isHovered {
+                text-decoration: underline !important;
+                text-underline-offset: 2vh;
+                text-decoration-color: rgb(255, 52, 8) !important;
+                animation: textAnim1 0.25s ease-in-out forwards;
+            }
+
+            @keyframes textAnim1 {
+                0% {
+                    color: black;
+                    text-deco
+                }
+
+                100% {
+                    color: rgb(255, 52, 8);
                 }
             }
         }
