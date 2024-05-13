@@ -26,8 +26,8 @@ const Header: React.FC = (): React.JSX.Element => {
                     {
                         headerTitles.map((title: string, index: number) => {
                             return (
-                                <a href={`/#${title}`} key={index} className={hovered[index] ? "HeaderButton isHovered" : "HeaderButton"} onMouseEnter={() => handleMouse(index, true)} onMouseLeave={() => handleMouse(index, false)}>
-                                    <h1 className='TitleHeader'>{title}</h1>
+                                <a href={`/#${title}`} key={index} className="HeaderButton" onMouseEnter={() => handleMouse(index, true)} onMouseLeave={() => handleMouse(index, false)}>
+                                    {title}
                                 </a>
                             )
                         })
