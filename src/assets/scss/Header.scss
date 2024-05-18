@@ -11,7 +11,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #ffffff;
+    background-color: #949494;
 
     #HeaderLogo {
       display: flex;
@@ -40,15 +40,34 @@
                 margin-bottom: 2vh;
                 cursor: pointer;
                 text-decoration: none;
-                animation: 
 
                 h1 {
-                    color: black;
                     font-size: 1.5em;
                     margin-left: 1vw;
                     margin-right: 1vw;
-                    font-family: "Montserrat", sans-serif;
                     font-weight: 100;
+                    color: black;
+                    transition: color 0.25s ease-in-out;
+                }
+
+                h1::after {
+                    content: "";
+                    display: block;
+                    position: relative;
+                    bottom: -1.25vh;
+                    left: 0;
+                    width: 0%;
+                    height: 2px;
+                    background-color: #ff4800;
+                    transition: width 0.25s ease-in-out;
+                }
+
+                h1:hover {
+                    color: #ff4800;
+                    transition: color 0.25s ease-in-out;
+                    &::after {
+                        width: 100%;
+                    }
                 }
             }
         }
