@@ -1,7 +1,7 @@
 #HeaderMain {
   position: fixed;
   width: 100vw;
-  height: 10vh;
+  max-height: 10vh;
   z-index: 1000;
   top: 0;
   left: 0;
@@ -18,8 +18,8 @@
       align-items: center;
       margin-left: 2vw;
       height: 7.5vh;
-      margin-top: 2vh;
-      margin-bottom: 2vh;
+      margin-top: 2.25vh;
+      margin-bottom: 2.25vh;
       cursor: pointer;
     }
 

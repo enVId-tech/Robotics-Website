@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes as Pathhub, Route as Path, Navigate as 
 import MainPage from './pages/index.tsx';
 
 // SCSS
+import './assets/scss/mainpage.scss';
 
 // Pages
 
