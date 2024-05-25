@@ -1,5 +1,5 @@
 import React from "react";
-import "../scss/Banner.scss";
+import "../../scss/sections/Banner.scss";
 // import img from "../assets/img/banner/banner.jpg";
 
 const Banner: React.FC = (): React.JSX.Element => {

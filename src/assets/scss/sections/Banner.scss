@@ -1,0 +1,33 @@
+#banner {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 80vh;
+    padding-top: 12vh;
+    border-bottom-color: black;
+    border-bottom-width: 5px;
+    border-bottom-style: solid;
+    #container {
+        display: flex;
+        flex-direction: inherit;
+        #left {
+            text-align: left;
+            padding-left: 10vw;
+            max-width: 50vw;
+            h1 {
+                font-size: 4vw;
+                font-family: "Montserrat", sans-serif;
+                font-weight: bold;
+            }
+            p {
+                font-size: 1.5vw;
+                font-family: "Montserrat", sans-serif;
+                font-weight: 200;
+            }
+        }
+        #right {
+            max-width: 40vw;
+            padding-right: 5vw;
+        }
+    }
+}

@@ -1,0 +1,18 @@
+#footer {
+    width: 100vw;
+    min-height: 2vh;
+    max-height: 40vh;
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    align-content: center;
+    justify-content: space-between;
+    
+    #left {
+        height: 20vh;
+    }
+
+    #right {
+        height: 20vh;
+    }
+}
