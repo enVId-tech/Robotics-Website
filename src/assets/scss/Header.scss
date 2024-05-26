@@ -3,6 +3,7 @@
     width: 100vw;
     height: 12vh;
     top: 0;
+    opacity: 0.95;
 
     #HeaderMain {
         position: fixed;
@@ -12,6 +13,7 @@
         top: 0;
         left: 0;
         font-family: "Montserrat", sans-serif;
+        opacity: 1 !important;
 
         #Header {
             display: flex;
@@ -51,7 +53,10 @@
                     text-decoration: none;
 
                     h1 {
-                        font-size: 1.5em;
+                        font-size: 1.25em;
+                        font-family: 'Poppins', sans-serif;
+                        font-weight: 300 !important;
+                        font-style: normal;
                         margin-left: 1vw;
                         margin-right: 1vw;
                         font-weight: 100;
@@ -68,7 +73,7 @@
                         width: 0%;
                         height: 2px;
                         background-color: #ff4800;
-                        transition: width 0.25s ease-in-out;
+                        transition: width 0.25s ease-out;
                     }
 
                     h1:hover {

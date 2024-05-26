@@ -1,18 +1,51 @@
 #footer {
     width: 100vw;
-    min-height: 2vh;
-    max-height: 40vh;
+    height: fit-content;
     display: flex;
     flex-direction: row;
     justify-items: center;
     align-content: center;
     justify-content: space-between;
+    justify-self: center;
     
+    $padding-foot: 7.5vh;
+    $padding-top-bottom: 2.25vh;
+
     #left {
-        height: 20vh;
+        width: 50vw;
+        height: fit-content;
+        padding-left: $padding-foot;
+        padding-top: $padding-top-bottom;
+        padding-bottom: $padding-top-bottom;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        p {
+            font-size: 2vw;
+            font-family: "Montserrat", sans-serif;
+            font-weight: 200;
+            line-height: 4vh;
+
+            a {
+                color: black;
+            }
+        }
     }
 
     #right {
-        height: 20vh;
+        width: 50vw;
+        height: fit-content;
+        padding-right: $padding-foot;
+        padding-top: $padding-top-bottom;
+        padding-bottom: $padding-top-bottom;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        p {
+            font-size: 2vw;
+            font-family: "Montserrat", sans-serif;
+            font-weight: 200;
+            line-height: 4vh;
+        }
     }
 }
