@@ -5,9 +5,11 @@ import img from '../assets/img/logo/logosmall.png';
 
 const Header: React.FC = (): React.JSX.Element => {
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    const [headerTitles, setHeaderTitles] = React.useState<string[]>(['Home', 'About', 'What we do', 'Our teams', 'Feed', 'Sponsers', 'Our Robots', 'Contact']);
+    const [headerTitles, setHeaderTitles] = React.useState<string[]>(['Home', 'About', 'What we do', 'Our teams', 'Impact', 'Sponsors', 'Our Robots', 'Contact']);
 
-
+    React.useEffect((): void => {
+        setHeaderTitles(['Home', 'About', 'What we do', 'Our teams', 'Impact', 'Sponsors', 'Our Robots', 'Contact']);
+    }, []);
 
     return (
         <section id="Header1">
