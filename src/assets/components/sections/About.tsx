@@ -6,9 +6,9 @@ const About: React.FC = (): React.JSX.Element => {
         <section id="about">
             <div id="container">
                 <div id="left">
-                    <img src="https://via.placeholder.com/500" alt="About" />
-                    <img src="https://via.placeholder.com/500" alt="About" />
-                    <img src="https://via.placeholder.com/500" alt="About" />
+                    <img src="https://via.placeholder.com/200" alt="About" />
+                    <img src="https://via.placeholder.com/200" alt="About" />
+                    <img src="https://via.placeholder.com/200" alt="About" />
                 </div>
                 <div id="right">
                     <div id="top">
