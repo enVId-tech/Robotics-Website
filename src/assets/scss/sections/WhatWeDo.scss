@@ -1,0 +1,44 @@
+#whatwedo {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 90vh;
+    padding-top: 12vh;
+    border-bottom-color: black;
+    border-bottom-width: 5px;
+    border-bottom-style: solid;
+    justify-content: center;
+
+    #title {
+        font-size: 4vw;
+        text-align: center;
+        font-family: 'archivo black', sans-serif;
+    }
+
+    #secondary {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        .do {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+
+            .title {
+                text-align: center;
+                font-family: 'archivo black', sans-serif;
+                font-size: 3vw;
+                line-height: 0.75rem;
+                margin-bottom: 2.25vw;
+            }
+
+            .description {
+                margin-top: 0;
+                width: 15vw;
+                font-family: 'poppins', sans-serif;
+                text-align: center;
+            }
+        }
+    }
+}

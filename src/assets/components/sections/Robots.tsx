@@ -3,7 +3,7 @@ import '../../scss/sections/Robots.scss'
 
 const Robots: React.FC = (): React.JSX.Element => {
     return (
-        <section id="about">
+        <section id="robots">
             
         </section>
     )
