@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: row;
     width: 100vw;
-    height: 90vh;
+    height: max-content;
     padding-top: 12vh;
     border-bottom-color: black;
     border-bottom-width: 5px;
@@ -53,11 +53,12 @@
                     display: flex;
                     flex-direction: row;
                     justify-content: space-between;
-                    width: 20vw;
-                    font-size: 2vw;
+                    width: 45vw;
+                    font-size: 1.5vw;
                     font-family: "Montserrat", sans-serif;
                     font-weight: 200;
                     line-height: 4vh;
+                    color: rgb(107 111 146);
                 }
             }
 
@@ -72,7 +73,7 @@
                 .about_org {
                     margin-top: 2vh;
                     margin-bottom: 2vh;
-                    background-color: rgb(130, 130, 130);
+                    background-color: rgb(247, 247, 247);
                     width: 40vw;
                     border-radius: 20px;
                     font-family: "poppins", sans-serif;
@@ -82,13 +83,30 @@
 
                     .about_title {
                         font-size: 2vw;
-                        font-weight: bold;
+                        font-weight: 400;
                         margin-top: 2vh;
                         margin-bottom: 2vh;
                     }
 
                     .about_desc_holder {
                         display: none;
+                        color: rgb(107 111 146);
+                        &.active {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-between;
+                            padding-bottom: 2vh;
+                        }
+                        
+                        a {
+                            color: rgb(13 110 253);
+                            transition: color ease-in-out 0.2s;
+
+                            &:hover {
+                                transition: color ease-in-out 0.2s;
+                                color: rgb(255 52 8);
+                            }
+                        }
                     }
                 }
             }

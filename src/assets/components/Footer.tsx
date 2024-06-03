@@ -11,7 +11,7 @@ const Footer: React.FC = (): React.JSX.Element => {
             </div>
             <div id="right">
                 <p id="bugs_warning">This is an ALPHA build, bugs beware!</p>
-                <p id="update_name">Update 28 - May 30, 2024</p>
+                <p id="update_name">Update 29 - June 3, 2024</p>
             </div>
         </section>
     );
