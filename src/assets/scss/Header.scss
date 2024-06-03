@@ -1,4 +1,4 @@
-#Header1 {
+#header {
     position: fixed;
     width: 100vw;
     height: 12vh;
@@ -64,7 +64,7 @@
                         transition: color 0.25s ease-in-out;
                     }
 
-                    h1::after {
+                    h1::after, .header_active {
                         content: "";
                         display: block;
                         position: relative;
@@ -76,7 +76,7 @@
                         transition: width 0.25s ease-out;
                     }
 
-                    h1:hover {
+                    h1:hover, .header_active {
                         color: #ff4800;
                         transition: color 0.25s ease-in-out;
 

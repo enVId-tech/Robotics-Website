@@ -3,16 +3,58 @@ import React from 'react';
 import '../scss/Header.scss';
 import img from '../assets/img/logo/logosmall.png';
 
+interface Sections {
+    sectionTitle: string;
+    sectionId: string;
+}
+
 const Header: React.FC = (): React.JSX.Element => {
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    const [headerTitles, setHeaderTitles] = React.useState<string[]>(['Home', 'About', 'What we do', 'Our teams', 'Impact', 'Sponsors', 'Our Robots', 'Contact']);
+    const [headerTitles, setHeaderTitles] = React.useState<string[]>([]);
+    const [sections, setSections] = React.useState<string[]>([]);
+    const [currentSection, setCurrentSection] = React.useState<string>('');
+    const [sectionsToUse, setSectionsToUse] = React.useState<Sections[]>([]);
 
     React.useEffect((): void => {
+        // exclude the header section and the footer section
+        setSections(document.querySelectorAll('section').length > 0 ? Array.from(document.querySelectorAll('section')).map((section: Element) => section.id).filter((section: string) => section !== 'header' && section !== 'footer') : []);
+        console.log(sections);
         setHeaderTitles(['Home', 'About', 'What we do', 'Our teams', 'Impact', 'Sponsors', 'Our Robots', 'Contact']);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
+    React.useEffect((): void => {
+        setSectionsToUse(sections.map((section: string) => {
+            return {
+                sectionTitle: section.charAt(0).toUpperCase() + section.slice(1),
+                sectionId: section
+            }
+        }));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
+
+    React.useEffect((): void => {
+        document.querySelectorAll('.HeaderButton').forEach((button: Element) => {
+            if (button.classList.contains('active')) {
+                button.classList.remove('active');
+            }
+            
+            if (currentSection === 'home') {
+                button.classList.add('active');
+            }
+        });
+    }, [currentSection]);
+
+    document.addEventListener('scroll', (): void => {
+        sections.forEach((section: string) => {
+            if (window.scrollY >= document.getElementById(section)!.offsetTop) {
+                setCurrentSection(section);
+            }
+        });
+    });
+
     return (
-        <section id="Header1">
+        <section id="header">
             <nav id="HeaderMain">
                 <span id="Header">
                     <a href="/#" id="HeaderTitle">
@@ -22,7 +64,7 @@ const Header: React.FC = (): React.JSX.Element => {
                         {
                             headerTitles.map((title: string, index: number) => {
                                 return (
-                                    <a href={`/#${title}`} key={index} className="HeaderButton">
+                                    <a href={`/#${title}`} className="HeaderButton" key={index}>
                                         <h1>{title}</h1>
                                     </a>
                                 )
