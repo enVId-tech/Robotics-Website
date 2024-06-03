@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import React from 'react';
 import '../scss/Header.scss';
 import img from '../assets/img/logo/logosmall.png';

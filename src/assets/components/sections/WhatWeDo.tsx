@@ -1,6 +1,8 @@
 import React from "react";
 import '../../scss/sections/WhatWeDo.scss';
 
+// Combine what we do into teams section.
+
 const WhatWeDo: React.FC = (): React.JSX.Element => {
     return (
         <section id="whatwedo">
