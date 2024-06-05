@@ -13,37 +13,16 @@ const Header: React.FC = (): React.JSX.Element => {
     const [headerTitles, setHeaderTitles] = React.useState<string[]>([]);
     const [sections, setSections] = React.useState<string[]>([]);
     const [currentSection, setCurrentSection] = React.useState<string>('');
-    const [sectionsToUse, setSectionsToUse] = React.useState<Sections[]>([]);
+    const [sectionIDs, setSectionIDs] = React.useState<string[]>([]);
 
     React.useEffect((): void => {
         // exclude the header section and the footer section
         setSections(document.querySelectorAll('section').length > 0 ? Array.from(document.querySelectorAll('section')).map((section: Element) => section.id).filter((section: string) => section !== 'header' && section !== 'footer') : []);
         console.log(sections);
         setHeaderTitles(['Home', 'About', 'What we do', 'Our teams', 'Impact', 'Sponsors', 'Our Robots', 'Contact']);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+        setSectionIDs(Array.from(document.querySelectorAll('section')).map(section => section.id));
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
-
-    React.useEffect((): void => {
-        setSectionsToUse(sections.map((section: string) => {
-            return {
-                sectionTitle: section.charAt(0).toUpperCase() + section.slice(1),
-                sectionId: section
-            }
-        }));
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []);
-
-    React.useEffect((): void => {
-        document.querySelectorAll('.HeaderButton').forEach((button: Element) => {
-            if (button.classList.contains('active')) {
-                button.classList.remove('active');
-            }
-            
-            if (currentSection === 'home') {
-                button.classList.add('active');
-            }
-        });
-    }, [currentSection]);
 
     document.addEventListener('scroll', (): void => {
         sections.forEach((section: string) => {
@@ -64,7 +43,7 @@ const Header: React.FC = (): React.JSX.Element => {
                         {
                             headerTitles.map((title: string, index: number) => {
                                 return (
-                                    <a href={`/#${title}`} className="HeaderButton" key={index}>
+                                    <a href={`/#${title}`} className={`HeaderButton ${sectionIDs[index] === currentSection ? 'header_active' : ''}`} key={index}>
                                         <h1>{title}</h1>
                                     </a>
                                 )
