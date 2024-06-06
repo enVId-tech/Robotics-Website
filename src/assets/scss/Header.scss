@@ -64,7 +64,7 @@
                         transition: color 0.25s ease-in-out;
                     }
 
-                    h1::after, .header_active {
+                    h1::after {
                         content: "";
                         display: block;
                         position: relative;

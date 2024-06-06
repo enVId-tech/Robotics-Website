@@ -12,7 +12,7 @@ const Footer: React.FC = (): React.JSX.Element => {
 
             <div id="right">
                 <p id="bugs_warning">This is an ALPHA build, bugs beware!</p>
-                <p id="update_name">Update 32 - June 5, 2024</p>
+                <p id="update_name">Update 33 - June 6, 2024</p>
             </div>
         </section>
     );

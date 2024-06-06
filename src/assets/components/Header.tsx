@@ -26,7 +26,7 @@ const Header: React.FC = (): React.JSX.Element => {
 
     document.addEventListener('scroll', (): void => {
         sections.forEach((section: string) => {
-            if (window.scrollY >= document.getElementById(section)!.offsetTop) {
+            if (window.scrollY + 100 >= document.getElementById(section)!.offsetTop) {
                 setCurrentSection(section);
             }
         });
@@ -43,8 +43,8 @@ const Header: React.FC = (): React.JSX.Element => {
                         {
                             headerTitles.map((title: string, index: number) => {
                                 return (
-                                    <a href={`/#${title}`} className={`HeaderButton ${sectionIDs[index] === currentSection ? 'header_active' : ''}`} key={index}>
-                                        <h1>{title}</h1>
+                                    <a href={`/#${title}`} className={`HeaderButton`} key={index}>
+                                        <h1 className={`${sectionIDs[index] === currentSection ? 'header_active' : ''}`}>{title}</h1>
                                     </a>
                                 )
                             })
