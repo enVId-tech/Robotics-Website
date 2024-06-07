@@ -3,13 +3,7 @@ import React from 'react';
 import '../scss/Header.scss';
 import img from '../assets/img/logo/logosmall.png';
 
-interface Sections {
-    sectionTitle: string;
-    sectionId: string;
-}
-
 const Header: React.FC = (): React.JSX.Element => {
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const [headerTitles, setHeaderTitles] = React.useState<string[]>([]);
     const [sections, setSections] = React.useState<string[]>([]);
     const [currentSection, setCurrentSection] = React.useState<string>('');

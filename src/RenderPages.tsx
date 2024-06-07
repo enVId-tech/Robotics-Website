@@ -4,6 +4,7 @@ import MainPage from './pages/index.tsx';
 
 // SCSS
 import './assets/scss/mainpage.scss';
+import OurTeamsPage from './pages/ourteams.tsx';
 
 // Pages
 
@@ -19,6 +20,7 @@ const RenderPages: React.FC = (): React.JSX.Element => {
 
                 {/* Paths */}
                 <Path path="/" element={<MainPage />} />
+                <Path path="/teams" element={<OurTeamsPage />} />
             </Pathhub>
         </Router>
     )
