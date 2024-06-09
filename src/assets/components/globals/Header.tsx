@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import React from 'react';
-import '../scss/Header.scss';
-import img from '../assets/img/logo/logosmall.png';
+import '../../scss/Header.scss';
+import img from '../../assets/img/logo/logosmall.png';
 
 const Header: React.FC = (): React.JSX.Element => {
     const [headerTitles, setHeaderTitles] = React.useState<string[]>([]);
@@ -20,7 +20,7 @@ const Header: React.FC = (): React.JSX.Element => {
 
     document.addEventListener('scroll', (): void => {
         sections.forEach((section: string) => {
-            if (window.scrollY + 100 >= document.getElementById(section)!.offsetTop) {
+            if (window.scrollY >= document.getElementById(section)!.offsetTop) {
                 setCurrentSection(section);
             }
         });
