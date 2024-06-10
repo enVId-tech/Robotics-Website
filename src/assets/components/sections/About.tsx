@@ -67,7 +67,6 @@ const About: React.FC = (): React.JSX.Element => {
                                             {descriptor["title"]}
                                         </h1>
                                         {
-                                            isClicked[index] &&
                                             <div className={`about_desc_holder ${isClicked[index] ? "active" : ""}`}>
                                                 <p className="about_desc">
                                                     {descriptor["description"]}
