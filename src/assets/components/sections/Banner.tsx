@@ -1,6 +1,7 @@
 import React from "react";
 import "../../scss/sections/Banner.scss";
 import img from "../../assets/new-img/logo-small.png";
+// const img = require("../../assets/new-img/logo-small.png");
 
 const Banner: React.FC = (): React.JSX.Element => {
     return (
