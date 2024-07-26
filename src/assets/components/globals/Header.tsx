@@ -25,6 +25,12 @@ const Header: React.FC = (): React.JSX.Element => {
                 setCurrentSection(section);
             }
         });
+
+        if (window.scrollY < 800) {
+            document.getElementById('header')!.classList.remove('header_active');
+        } else {
+            document.getElementById('header')!.classList.add('header_active');
+        }
     });
 
     return (

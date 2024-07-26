@@ -14,6 +14,9 @@ const Banner: React.FC = (): React.JSX.Element => {
                     <h1 id="main">
                         We are OA Robotics
                     </h1>
+                    <h5 id="sub">
+                        FRC - FTC - VEX
+                    </h5>
                 </div>
             </div>
         </section>
