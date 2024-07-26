@@ -7,8 +7,29 @@ const TeamsHome: React.FC = (): React.JSX.Element => {
             <div id="container">
                 <div className="team">
                     <img src="" alt="Team" />
-                    <h1 className="title">FRC Team 4079</h1>
-                    <p className="description">Our Premiere FIRST Robotics Competition team, Quantum Leap, competes in the FRC competition.</p>
+                    <img src="" alt="FIRST Robotics Competition" />
+                    <div className="team-info">
+                        <h1 className="title">Team 4079</h1>
+                        <p className="description">Our Premiere FIRST Robotics Competition team, Quantum Leap, competes in the FRC competition.</p>
+                    </div>
+                </div>
+                <div className="team">
+                    <img src="" alt="Team" />
+                    <img src="" alt="FIRST Tech Challenge" />
+                    <div className="team-info">
+                        <h1 className="title">FTC Team 19152A</h1>
+                        <p className="description">Our FIRST Tech Challenge team, Quantum Leap, competes in the FTC competition.</p>
+                    </div>
+                    <div className="team-info">
+                        <h1 className="title">FTC Team 19152B</h1>
+                        <p className="description">Our FIRST Tech Challenge team, Quantum Leap, competes in the FTC competition.</p>
+                    </div>
+                </div>
+                <div className="team">
+                    <img src="" alt="Team" />
+                    <img src="" alt="Vex Robotics" />
+                    <h1 className="title">VRC Team 1774</h1>
+                    <p className="description">Our Vex Robotics Competition team, Quantum Leap, competes in the VRC competition.</p>
                 </div>
             </div>
         </section>
