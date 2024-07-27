@@ -6,6 +6,8 @@ import VRC from '../../assets/new-img/logos/VRC.png';
 import VIQ from '../../assets/new-img/logos/VIQ.png';
 
 const TeamsHome: React.FC = (): React.JSX.Element => {
+    const [activeTeam, setActiveTeam] = React.useState<string>('FRC');
+
     return (
         <section id="teamshome">
             <div id="container">
@@ -40,6 +42,17 @@ const TeamsHome: React.FC = (): React.JSX.Element => {
                         <img src={VIQ} alt="Vex IQ" />
                         <h1 className="title">Team 1</h1>
                         <p className="description">Our Vex IQ team, Quantum Leap, competes in the VIQ competition.</p>
+                    </div>
+                </div>
+                <div id="bottom-teamselector">
+                    <div className="team-selector">
+                        <h1 id="team-title">{activeTeam}</h1>
+                        <div id="team-selectors">
+                            <button className={`team-button ${activeTeam === 'FRC' ? 'active' : ''}`} onClick={(): void => setActiveTeam('FRC')} id="FRC" />
+                            <button className={`team-button ${activeTeam === 'FTC' ? 'active' : ''}`} onClick={(): void => setActiveTeam('FTC')} id="FTC" />
+                            <button className={`team-button ${activeTeam === 'VRC' ? 'active' : ''}`} onClick={(): void => setActiveTeam('VRC')} id="VRC" />
+                            <button className={`team-button ${activeTeam === 'VIQ' ? 'active' : ''}`} onClick={(): void => setActiveTeam('VIQ')} id="VIQ" />
+                        </div>
                     </div>
                 </div>
             </div>
