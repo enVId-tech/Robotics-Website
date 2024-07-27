@@ -8,6 +8,41 @@ import VIQ from '../../assets/new-img/logos/VIQ.png';
 const TeamsHome: React.FC = (): React.JSX.Element => {
     const [activeTeam, setActiveTeam] = React.useState<string>('FRC');
 
+    React.useEffect(() => {
+        const handleScroll = () => {
+            const teamSelector = document.getElementById('bottom-teamselector');
+            const container = document.getElementById('teamshome');
+            const header = document.getElementById('header');
+            if (teamSelector && container) {
+                if (window.scrollY + window.innerHeight >= container.offsetTop + 200) {
+                    teamSelector.classList.add('active');
+                    header?.classList.add('header_hide');
+                } else if (window.scrollY + window.innerHeight < container.offsetTop + 200) {
+                    teamSelector.classList.remove('active');
+                    header?.classList.remove('header_hide');
+                } else if (window.scrollY + window.innerHeight > container.offsetHeight) {
+                    teamSelector.classList.remove('active');
+                    header?.classList.remove('header_hide');
+                } else {
+                    teamSelector.classList.remove('active');
+                    header?.classList.remove('header_hide');
+                }
+            }
+
+            if (window.scrollY < 800) {
+                document.getElementById('header')!.classList.remove('header_active');
+            } else {
+                document.getElementById('header')!.classList.add('header_active');
+            }
+        }
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        }
+    }, [window.scrollY])
+
     return (
         <section id="teamshome">
             <div id="container">
@@ -44,7 +79,7 @@ const TeamsHome: React.FC = (): React.JSX.Element => {
                         <p className="description">Our Vex IQ team, Quantum Leap, competes in the VIQ competition.</p>
                     </div>
                 </div>
-                <div id="bottom-teamselector">
+                <div id="bottom-teamselector" className="active">
                     <div className="team-selector">
                         <h1 id="team-title">{activeTeam}</h1>
                         <div id="team-selectors">
