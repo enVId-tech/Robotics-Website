@@ -1,14 +1,25 @@
 import React from "react";
 import "../../scss/sections/Banner.scss";
-import img from "../../assets/new-img/logo-small.png";
+import img from "../../assets/new-img/logo-small-transparent.png";
+// import img from "../../assets/new-img/logo-small.png";
 // const img = require("../../assets/new-img/logo-small.png");
 
 const Banner: React.FC = (): React.JSX.Element => {
+    const imgRef = React.useRef<HTMLImageElement>(null);
+    // Create parallax effect with the top img
+    // React.useEffect(() => {
+        window.addEventListener("scroll", () => {
+            if (imgRef.current) {
+                imgRef.current.style.top = `${window.scrollY * 0.5}px`;
+            }
+        });
+    // }, []);
+
     return (
         <section id="banner">
             <div id="container">
                 <div id='top'>
-                    <img src={img} alt="Banner" />
+                    <img src={img} alt="Banner" ref={imgRef} />
                 </div>
                 <div id='bottom'>
                     <h1 id="main">
