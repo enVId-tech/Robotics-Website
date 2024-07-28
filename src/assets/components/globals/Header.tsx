@@ -45,7 +45,7 @@ const Header: React.FC = (): React.JSX.Element => {
                             headerTitles.map((title: string, index: number) => {
                                 return (
                                     <a href={`/#${title}`} className={`HeaderButton`} key={index}>
-                                        <h1 className={`${sectionIDs[index] === currentSection ? 'header_active' : ''}`}>{title}</h1>
+                                        <h1 className={`${sectionIDs[index] === currentSection ? 'active' : ''}`}>{title}</h1>
                                     </a>
                                 )
                             })

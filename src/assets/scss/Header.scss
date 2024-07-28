@@ -17,7 +17,7 @@
         left: 0;
         font-family: "Montserrat", sans-serif;
         opacity: 1 !important;
-
+        background-color: rgba(255, 255, 255, 0.95);
         #Header {
             display: flex;
             justify-content: space-between;
@@ -75,7 +75,7 @@
                         transition: width 0.25s ease-out;
                     }
 
-                    h1:hover, .header_active {
+                    h1:hover, .active {
                         color: #ff4800;
                         transition: color 0.25s ease-in-out;
 
@@ -92,8 +92,7 @@
 .header_active {
     transform: translateY(0) !important;
     transition: all 0.5s ease-in-out;
-    background-color: white;
-
+    box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.1);
     &::after {
         width: 100%;
     }

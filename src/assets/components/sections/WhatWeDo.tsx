@@ -3,12 +3,6 @@ import '../../scss/sections/WhatWeDo.scss';
 
 const imgNames: string[] = ["robotics_working", "marketing_working", "competition_working"];
 
-import img from '../../assets/new-img/robotics/competition_working.jpg';
-import img2 from '../../assets/new-img/robotics/marketing_working.jpg';
-import img3 from '../../assets/new-img/robotics/robotics_working.jpg';
-
-// Combine what we do into teams section.
-
 const WhatWeDo: React.FC = (): React.JSX.Element => {
     return (
         <section id="whatwedo">
@@ -18,18 +12,18 @@ const WhatWeDo: React.FC = (): React.JSX.Element => {
             {/* Refer to what OA STEM does with their about page to remember what I want to do. */}
             <div id="secondary">
                 <div id="create" className="do">
-                    <img src={img3} alt="Create" />
+                    <div id="inform_img"/>
                     <h1 className="title">
-                        Create
+                        Inform
                     </h1>
 
                     <p className="description">
-                        We create engaging content on our social media channels to keep our members and community up to date with our projects.
+                        We inform and educate our community about the importance of STEM and robotics.
                     </p>
                 </div>
 
                 <div id="build" className="do">
-                    <img src={img2} alt="Build" />
+                    <div id="build_img" />
                     <h1 className="title">
                         Build
                     </h1>
@@ -40,7 +34,7 @@ const WhatWeDo: React.FC = (): React.JSX.Element => {
                 </div>
 
                 <div id="compete" className="do">
-                    <img src={img} alt="Compete" />
+                    <div id="compete_img" />
                     <h1 className="title">
                         Compete
                     </h1>

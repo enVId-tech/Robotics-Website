@@ -6,8 +6,8 @@
     height: 90vh;
     padding-top: 12vh;
     justify-content: center;
-    background-image: radial-gradient(circle, rgb(0, 0, 0), rgba(0, 0, 0, 0)), url("../../assets/new-img/comp/FRC_1.jpg");
-    background-position: center;
+    background-image: radial-gradient(circle, rgb(0, 0, 0), rgba(0, 0, 0, 0)), url("../../assets/new-img/robotics/group_blurred.png");
+    background-position-x: center;
     background-size: cover;
     background-repeat: no-repeat;
     box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.1);
@@ -16,9 +16,10 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        background-color: rgba(0, 0, 0, 0.5);
+        background-color: rgba(0, 0, 0, 0.41);
+        background-image: radial-gradient(circle, rgb(0, 0, 0), rgba(0, 0, 0, 0));
         border-radius: 50%;
-        box-shadow: 0 0 100px 80px rgba(0, 0, 0, 0.5);
+        box-shadow: 0 0 80px 10px rgba(0, 0, 0, 1);
         padding: 5vh;
         height: min-content;
         color: white;
@@ -36,7 +37,7 @@
                 font-weight: bold;
                 margin-bottom: 2vh;
                 opacity: 0;
-                animation: txtTransform 0.75s ease-in-out forwards 0.25s;
+                animation: txtTransform 0.75s ease-in-out forwards 0.4s;
             }
 
             h5 {
@@ -47,7 +48,7 @@
                 width: 100%;
                 text-align: center;
                 opacity: 0;
-                animation: txtTransform 1s ease-in-out forwards 0.5s;
+                animation: txtTransform 1s ease-in-out forwards 0.6s;
             }
 
             @keyframes txtTransform {
