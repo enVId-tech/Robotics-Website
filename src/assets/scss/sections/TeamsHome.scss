@@ -18,7 +18,7 @@
         height: 100%;
         padding: 0;
         margin: 0;
-        
+
         .team {
             height: 100vh;
             width: 100%;
@@ -27,6 +27,7 @@
             flex-direction: row;
             // background-color: rgba(0, 0, 0, 0.5);
             justify-content: center;
+
             img {
                 background-position: center;
                 background-size: cover;
@@ -36,46 +37,52 @@
 
             .team-info {
                 display: flex;
-                flex-direction: column;
+                flex-direction: row;
                 align-items: center;
                 justify-content: center;
-                background-image: radial-gradient(circle, rgb(255, 255, 255), rgba(0, 0, 0, 0.5)), url("../../assets/new-img/comp/FRC_1.jpg");
+                background-image: radial-gradient(circle, rgb(255, 255, 255), rgba(0, 0, 0, 0.692)), url("../../assets/new-img/comp/FRC_1.jpg");
                 background-position: center;
                 background-size: cover;
                 background-repeat: no-repeat;
                 transition: background-image 0.5s ease-in-out;
                 width: 100%;
-    
 
-                h1 {
-                    font-size: 2em;
-                    font-family: "Montserrat", sans-serif;
-                    font-weight: bold;
-                    margin-bottom: 2vh;
-                    width: 100%;
-                    text-align: center;
-                    opacity: 0;
-                    animation: txtTransform 0.75s ease-in-out forwards 0.25s;
-                    z-index: 1000;
-                }
+                .team-info-desc {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
 
-                p {
-                    font-size: 2vw;
-                    font-family: "Montserrat", sans-serif;
-                    font-weight: 300;
-                    margin-top: 10vh;
-                    width: 70%;
-                    text-align: center;
-                    opacity: 0;
-                    animation: txtTransform 1s ease-in-out forwards 0.5s;
-                    z-index: 1000;
+                    h1 {
+                        font-size: 2em;
+                        font-family: "Montserrat", sans-serif;
+                        font-weight: bold;
+                        margin-bottom: 2vh;
+                        width: 100%;
+                        text-align: center;
+                        opacity: 0;
+                        animation: txtTransform 0.75s ease-in-out forwards 0.25s;
+                        z-index: 1000;
+                    }
+
+                    p {
+                        font-size: 2vw;
+                        font-family: "Montserrat", sans-serif;
+                        font-weight: 300;
+                        margin-top: 10vh;
+                        width: 70%;
+                        text-align: center;
+                        opacity: 0;
+                        animation: txtTransform 1s ease-in-out forwards 0.5s;
+                        z-index: 1000;
+                    }
                 }
             }
         }
 
         #bottom-teamselector {
             transform: translateY(15vh);
-            transition: transform 0.5s ease-in-out;        
+            transition: transform 0.5s ease-in-out;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -150,7 +157,7 @@
 
             &.active {
                 transform: translateY(0);
-                transition: transform 0.5s ease-in-out;    
+                transition: transform 0.5s ease-in-out;
             }
         }
     }
