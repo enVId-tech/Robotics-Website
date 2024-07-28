@@ -8,6 +8,7 @@ import WhatWeDo from '../assets/components/sections/WhatWeDo.tsx'
 import Impact from '../assets/components/sections/Impact.tsx'
 import Sponsers from '../assets/components/sections/Sponsers.tsx'
 import TeamsHome from '../assets/components/sections/TeamsHome.tsx'
+import Feed from '../assets/components/sections/Feed.tsx'
 
 const MainPage: React.FC = (): React.JSX.Element => {
     return (
@@ -21,6 +22,7 @@ const MainPage: React.FC = (): React.JSX.Element => {
             <WhatWeDo />
             <TeamsHome />
             <Impact />
+            <Feed />
             <Sponsers />
             <Robots />
 
