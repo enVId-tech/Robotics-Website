@@ -89,19 +89,19 @@
             }
         }
     }
-}
 
-.header_active {
-    transform: translateY(0) !important;
-    transition: all 0.5s ease-in-out;
-    box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.1);
-
-    &::after {
-        width: 100%;
+    &.header_active {
+        transform: translateY(0);
+        transition: all 0.5s ease-in-out;
+        box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.1);
+    
+        &::after {
+            width: 100%;
+        }
     }
-}
 
-.header_hide {
-    transform: translateY(-12vh) !important;
-    transition: all 0.5s ease-in-out;
+    &.header_hide {
+        transform: translateY(-12vh) !important;
+        transition: all 0.5s ease-in-out;
+    }
 }

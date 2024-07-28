@@ -6,14 +6,6 @@ import img from "../../assets/new-img/logo-small-transparent.png";
 
 const Banner: React.FC = (): React.JSX.Element => {
     const imgRef = React.useRef<HTMLImageElement>(null);
-    // Create parallax effect with the top img
-    // React.useEffect(() => {
-        window.addEventListener("scroll", () => {
-            if (imgRef.current) {
-                imgRef.current.style.top = `${window.scrollY * 0.5}px`;
-            }
-        });
-    // }, []);
 
     return (
         <section id="banner">

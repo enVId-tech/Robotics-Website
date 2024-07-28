@@ -18,6 +18,7 @@ interface Descriptor<T = Team[]> {
 
 const TeamsHome: React.FC = (): React.JSX.Element => {
     const [activeTeam, setActiveTeam] = React.useState<string>('FRC');
+    const [offset, setOffset] = React.useState<number>(0);
 
     const descriptorsTemp: Descriptor[] = [
         {
@@ -68,18 +69,20 @@ const TeamsHome: React.FC = (): React.JSX.Element => {
     ]
 
     React.useEffect(() => {
-        const handleScroll = () => {
+        const handleScroll = (): void => {
             const teamSelector = document.getElementById('bottom-teamselector');
             const container = document.getElementById('teamshome');
             const header = document.getElementById('header');
+            setOffset(600);
+
             if (teamSelector && container) {
-                if (window.scrollY + window.innerHeight >= container.offsetTop + 600) {
-                    teamSelector.classList.add('active');
-                    header?.classList.add('header_hide');
-                } else if (window.scrollY + window.innerHeight < container.offsetTop + 600) {
+                if (window.scrollY + window.innerHeight > container.offsetTop + container.offsetHeight + offset) {
                     teamSelector.classList.remove('active');
                     header?.classList.remove('header_hide');
-                } else if (window.scrollY + window.innerHeight > container.offsetHeight) {
+                } else if (window.scrollY + window.innerHeight >= container.offsetTop + offset) {
+                    teamSelector.classList.add('active');
+                    header?.classList.add('header_hide');
+                } else if (window.scrollY + window.innerHeight < container.offsetTop + (offset * (1 / 3))) {
                     teamSelector.classList.remove('active');
                     header?.classList.remove('header_hide');
                 } else {
@@ -121,6 +124,18 @@ const TeamsHome: React.FC = (): React.JSX.Element => {
                         )
                     })
                 }
+                <div id="bottom-teamselector">
+                    <div className="team-selector">
+                        <h1 id="team-title">{activeTeam}</h1>
+                        <div id="team-selectors">
+                            <hr />
+                            <button className={`team-button ${activeTeam === 'FRC' ? 'active' : ''}`} onClick={(): void => setActiveTeam('FRC')} id="FRC" />
+                            <button className={`team-button ${activeTeam === 'FTC' ? 'active' : ''}`} onClick={(): void => setActiveTeam('FTC')} id="FTC" />
+                            <button className={`team-button ${activeTeam === 'VRC' ? 'active' : ''}`} onClick={(): void => setActiveTeam('VRC')} id="VRC" />
+                            <button className={`team-button ${activeTeam === 'VIQ' ? 'active' : ''}`} onClick={(): void => setActiveTeam('VIQ')} id="VIQ" />
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     )
