@@ -11,12 +11,8 @@ const Banner: React.FC = (): React.JSX.Element => {
         setOffsetY(window.scrollY);
     }
 
-    React.useEffect(() => {
-        window.addEventListener('scroll', handleScroll);
-        return (): void => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, []);
+
+    window.addEventListener('scroll', handleScroll);
 
     return (
         <section
