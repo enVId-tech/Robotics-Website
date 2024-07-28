@@ -83,6 +83,10 @@ const About: React.FC = (): React.JSX.Element => {
                                     <div key={index} className="about_org" onClick={(): void => setClicked(index)}>
                                         <h1 className="about_title">
                                             {descriptor["title"]}
+                                            <div className="addIcon">
+                                                <hr className={`${isClicked[index] ? "" : "first"}`} />
+                                                <hr className={`${isClicked[index] ? "" : "second"}`} />
+                                            </div>
                                         </h1>
                                         {
                                             <div className={`about_desc_holder ${isClicked[index] ? "active" : ""}`}>

@@ -1,19 +1,27 @@
 #banner {
     display: flex;
     flex-direction: row;
+    min-height: 90vh;
     width: 100vw;
     height: 90vh;
     padding-top: 12vh;
-    border-bottom-color: black;
-    border-bottom-width: 5px;
-    border-bottom-style: solid;
     justify-content: center;
+    background-image: radial-gradient(circle, rgb(0, 0, 0), rgba(0, 0, 0, 0)), url("../../assets/new-img/comp/FRC_1.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.1);
 
     #container {
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: space-around;
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 50%;
+        box-shadow: 0 0 100px 80px rgba(0, 0, 0, 0.5);
+        padding: 5vh;
+        height: min-content;
+        color: white;
 
         #bottom {
             display: flex;
@@ -21,8 +29,7 @@
             text-align: left;
             justify-content:flex-start;
             align-items: flex-start;
-            height: 50vh;
-
+            
             h1 {
                 font-size: 4vw;
                 font-family: "Montserrat", sans-serif;
@@ -61,9 +68,8 @@
             display: flex;
             flex-direction: column;
             text-align: left;
-            max-width: 90vw;
-            height: 40vh;
             justify-content: flex-end;
+            margin-top: 10vh;
 
             img {
                 width: 15vw;

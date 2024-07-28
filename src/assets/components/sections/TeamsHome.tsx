@@ -5,8 +5,48 @@ import FTC from '../../assets/new-img/logos/FTC.png';
 import VRC from '../../assets/new-img/logos/VRC.png';
 import VIQ from '../../assets/new-img/logos/VIQ.png';
 
+interface Descriptor {
+    title: string;
+    team: string;
+    description: string;
+    image?: string;
+}
+
 const TeamsHome: React.FC = (): React.JSX.Element => {
     const [activeTeam, setActiveTeam] = React.useState<string>('FRC');
+
+    const descriptors: Descriptor[] = [
+        {
+            title: "FRC",
+            team: "4079",
+            description: "Our premiere FIRST Robotics Competition team, Quantum Leap, competes in the FRC competition.",
+            image: FRC,
+        },
+        {
+            title: "FTC",
+            team: "19152A",
+            description: "Our FIRST Tech Challenge team, Quantum Leap, competes in the FTC competition.",
+            image: FTC,
+        },
+        {
+            title: "FTC",
+            team: "19152B",
+            description: "Our FIRST Tech Challenge team, Quantum Leap, competes in the FTC competition.",
+            image: FTC,
+        },
+        {
+            title: "VRC",
+            team: "1",
+            description: "Our Vex Robotics Competition team, Quantum Leap, competes in the VRC competition.",
+            image: VRC,
+        },
+        {
+            title: "VIQ",
+            team: "1",
+            description: "Our Vex IQ team, Quantum Leap, competes in the VIQ competition.",
+            image: VIQ,
+        }
+    ];
 
     React.useEffect(() => {
         const handleScroll = () => {
@@ -30,6 +70,7 @@ const TeamsHome: React.FC = (): React.JSX.Element => {
             }
         }
 
+
         window.addEventListener('scroll', handleScroll);
 
         return () => {
@@ -40,51 +81,19 @@ const TeamsHome: React.FC = (): React.JSX.Element => {
     return (
         <section id="teamshome">
             <div id="container">
-                <div className="team">
-                    <div className="team-info">
-                        <img src={FRC} alt="FIRST Robotics Competition" />
-                        <h1 className="title">Team 4079</h1>
-                        <p className="description">Our premiere FIRST Robotics Competition team, Quantum Leap, competes in the FRC competition.</p>
-                    </div>
-                </div>
-                <div className="team">
-                    <div className="team-info">
-                        <img src={FTC} alt="FIRST Tech Challenge" />
-                        <h1 className="title">Team 19152A</h1>
-                        <p className="description">Our FIRST Tech Challenge team, Quantum Leap, competes in the FTC competition.</p>
-                    </div>
-                    <div className="team-info">
-                        <img src={FTC} alt="FIRST Tech Challenge" />
-                        <h1 className="title">Team 19152B</h1>
-                        <p className="description">Our FIRST Tech Challenge team, Quantum Leap, competes in the FTC competition.</p>
-                    </div>
-                </div>
-                <div className="team">
-                    <div className="team-info">
-                        <img src={VRC} alt="Vex Robotics Competition" />
-                        <h1 className="title">Team 1</h1>
-                        <p className="description">Our Vex Robotics Competition team, Quantum Leap, competes in the VRC competition.</p>
-                    </div>
-                </div>
-                <div className="team">
-                    <div className="team-info">
-                        <img src={VIQ} alt="Vex IQ" />
-                        <h1 className="title">Team 1</h1>
-                        <p className="description">Our Vex IQ team, Quantum Leap, competes in the VIQ competition.</p>
-                    </div>
-                </div>
-                <div id="bottom-teamselector">
-                    <div className="team-selector">
-                        <h1 id="team-title">{activeTeam}</h1>
-                        <div id="team-selectors">
-                            <button className={`team-button ${activeTeam === 'FRC' ? 'active' : ''}`} onClick={(): void => setActiveTeam('FRC')} id="FRC" />
-                            <button className={`team-button ${activeTeam === 'FTC' ? 'active' : ''}`} onClick={(): void => setActiveTeam('FTC')} id="FTC" />
-                            <button className={`team-button ${activeTeam === 'VRC' ? 'active' : ''}`} onClick={(): void => setActiveTeam('VRC')} id="VRC" />
-                            <button className={`team-button ${activeTeam === 'VIQ' ? 'active' : ''}`} onClick={(): void => setActiveTeam('VIQ')} id="VIQ" />
-                            <hr />
-                        </div>
-                    </div>
-                </div>
+                {
+                    descriptors.map((descriptor: Descriptor, index: number): React.JSX.Element => {
+                        return (
+                            <div key={index} className="team" id={descriptor.title}>
+                                <div className="team-info">
+                                    <img src={descriptor.image} alt="Team" />
+                                    <h1 className="title">Team {descriptor.team}</h1>
+                                    <p className="description">{descriptor.description}</p>
+                                </div>
+                            </div>
+                        )
+                    })
+                }
             </div>
         </section>
     )
