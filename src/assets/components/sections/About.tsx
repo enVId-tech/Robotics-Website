@@ -8,6 +8,7 @@ interface Descriptor {
 
 const About: React.FC = (): React.JSX.Element => {
     const [isClicked, setIsClicked] = React.useState<boolean[]>([]);
+
     const descriptors = React.useMemo((): Descriptor[] => [
         {
             title: "Mission Statement",
@@ -27,18 +28,35 @@ const About: React.FC = (): React.JSX.Element => {
         }
     ], []);
 
-    const setClicked = (index: number): void => {
-        setIsClicked(new Array(descriptors.length).fill(false));
-        setIsClicked((prev: boolean[]): boolean[] => {
-            const temp: boolean[] = prev.slice();
-            temp[index] = !temp[index];
-            return temp;
+    React.useEffect((): void => {
+        const descHolders: NodeListOf<HTMLElement> = document.querySelectorAll(".about_desc_holder");
+
+        descHolders.forEach((descHolder: HTMLElement, index: number): void => {
+            if (isClicked[index]) {
+                if (descHolder.clientHeight) {
+                    descHolder.style.height = '0px';
+                } else {
+                    descHolder.style.height = descHolder.scrollHeight + 'px';
+                }
+                descHolder.classList.add("active");
+            } else {
+                descHolder.style.height = '0px';
+                descHolder.classList.remove("active");
+            }
         });
-    }
+    }, [isClicked]);
 
     React.useEffect((): void => {
         setIsClicked(new Array(descriptors.length).fill(false));
     }, [descriptors]);
+
+    const setClicked = (index: number): void => {
+        if (isClicked[index]) {
+            setIsClicked(new Array(descriptors.length).fill(false));
+        } else {
+            setIsClicked(isClicked.map((value: boolean, i: number): boolean => i === index ? !value : false));
+        }
+    }
 
     return (
         <section id="about">
@@ -52,15 +70,15 @@ const About: React.FC = (): React.JSX.Element => {
                     <div id="top">
                         <h1 id="title">About Us</h1>
                         <p id="description">
-                        We are OA Robotics, a team of engineers and developers located in Orange County, California. 
-                        We are based at Oxford Academy in Cypress, and strive to promote robotics and STEM within our communities.
-                        Our teams design, assemble, and test competitive robots, while learning and teaching the scientific and technical concepts behind it.
-                        Our students are passionate about robotics and aim to promote and continue the culture of innovation and creativity throughout the team as a whole.
+                            We are OA Robotics, a team of engineers and developers located in Orange County, California.
+                            We are based at Oxford Academy in Cypress, and strive to promote robotics and STEM within our communities.
+                            Our teams design, assemble, and test competitive robots, while learning and teaching the scientific and technical concepts behind it.
+                            Our students are passionate about robotics and aim to promote and continue the culture of innovation and creativity throughout the team as a whole.
                         </p>
                     </div>
                     <div id="bottom">
                         {
-                            descriptors.map((descriptor: Descriptor , index: number): React.JSX.Element => {
+                            descriptors.map((descriptor: Descriptor, index: number): React.JSX.Element => {
                                 return (
                                     <div key={index} className="about_org" onClick={(): void => setClicked(index)}>
                                         <h1 className="about_title">

@@ -90,14 +90,14 @@
                     }
 
                     .about_desc_holder {
-                        max-height: 0;
+                        flex-direction: column;
+                        justify-content: space-between;
                         color: rgb(107 111 146);
                         overflow-y: hidden;
-                        transition: max-height 0.5s ease-in-out;
+                        transition: all 0.5s ease-in-out;
 
                         &.active {
-                            max-height: 100vh;
-                            padding-bottom: 2vh;
+                            transition: all 0.5s ease-in-out;
                         }
                         
                         a {

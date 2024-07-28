@@ -14,10 +14,10 @@ const TeamsHome: React.FC = (): React.JSX.Element => {
             const container = document.getElementById('teamshome');
             const header = document.getElementById('header');
             if (teamSelector && container) {
-                if (window.scrollY + window.innerHeight >= container.offsetTop + 200) {
+                if (window.scrollY + window.innerHeight >= container.offsetTop + 600) {
                     teamSelector.classList.add('active');
                     header?.classList.add('header_hide');
-                } else if (window.scrollY + window.innerHeight < container.offsetTop + 200) {
+                } else if (window.scrollY + window.innerHeight < container.offsetTop + 600) {
                     teamSelector.classList.remove('active');
                     header?.classList.remove('header_hide');
                 } else if (window.scrollY + window.innerHeight > container.offsetHeight) {
@@ -27,12 +27,6 @@ const TeamsHome: React.FC = (): React.JSX.Element => {
                     teamSelector.classList.remove('active');
                     header?.classList.remove('header_hide');
                 }
-            }
-
-            if (window.scrollY < 800) {
-                document.getElementById('header')!.classList.remove('header_active');
-            } else {
-                document.getElementById('header')!.classList.add('header_active');
             }
         }
 
@@ -79,7 +73,7 @@ const TeamsHome: React.FC = (): React.JSX.Element => {
                         <p className="description">Our Vex IQ team, Quantum Leap, competes in the VIQ competition.</p>
                     </div>
                 </div>
-                <div id="bottom-teamselector" className="active">
+                <div id="bottom-teamselector">
                     <div className="team-selector">
                         <h1 id="team-title">{activeTeam}</h1>
                         <div id="team-selectors">
@@ -87,6 +81,7 @@ const TeamsHome: React.FC = (): React.JSX.Element => {
                             <button className={`team-button ${activeTeam === 'FTC' ? 'active' : ''}`} onClick={(): void => setActiveTeam('FTC')} id="FTC" />
                             <button className={`team-button ${activeTeam === 'VRC' ? 'active' : ''}`} onClick={(): void => setActiveTeam('VRC')} id="VRC" />
                             <button className={`team-button ${activeTeam === 'VIQ' ? 'active' : ''}`} onClick={(): void => setActiveTeam('VIQ')} id="VIQ" />
+                            <hr />
                         </div>
                     </div>
                 </div>

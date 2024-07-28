@@ -27,8 +27,6 @@
             flex-direction: row;
             // background-color: rgba(0, 0, 0, 0.5);
             justify-content: center;
-            background-image: radial-gradient(circle, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://images.unsplash.com/photo-1612838320302-4b3b3b3b3b3b");
-
             img {
                 background-position: center;
                 background-size: cover;
@@ -41,6 +39,13 @@
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
+                background-image: radial-gradient(circle, rgb(255, 255, 255), rgba(0, 0, 0, 0)), url("../../assets/new-img/comp/FRC_1.jpg");
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                transition: background-image 0.5s ease-in-out;
+                width: 100%;
+    
 
                 h1 {
                     font-size: 2em;
@@ -104,9 +109,11 @@
                 #team-selectors {
                     display: flex;
                     flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
                     margin-bottom: 2vh;
 
-                    .team-button {
+                    button {
                         display: flex;
                         flex-direction: row;
                         justify-content: center;
@@ -122,10 +129,21 @@
                         background-color: rgba(255, 255, 255, 0);
                         cursor: pointer;
                         transition: background-color 0.25s ease-in-out;
+                        z-index: 1000;
 
                         &:hover {
                             background-color: rgba(0, 0, 0, 0.75);
                         }
+                    }
+
+                    hr {
+                        width: 30vw;
+                        position: absolute;
+                        display: flex;
+                        border: 1px solid white;
+                        margin: 0;
+                        padding: 0;
+                        z-index: 100;
                     }
                 }
             }
