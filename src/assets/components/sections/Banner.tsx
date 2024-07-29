@@ -7,13 +7,21 @@ import img from "../../assets/new-img/logo-small-transparent.png";
 const Banner: React.FC = (): React.JSX.Element => {
     const [offsetY, setOffsetY] = React.useState(0);
 
-    const handleScroll = (): void => {
+    const handleScroll = () => {
         setOffsetY(window.scrollY);
-    }
+    };
 
+    React.useEffect(() => {
+        const onScroll = () => {
+            requestAnimationFrame(handleScroll);
+        };
 
-    window.addEventListener('scroll', handleScroll);
+        window.addEventListener('scroll', onScroll);
 
+        return () => {
+            window.removeEventListener('scroll', onScroll);
+        };
+    }, []);
     return (
         <section
             id="banner"
