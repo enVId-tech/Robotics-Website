@@ -6,6 +6,94 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin-top: 10vh;
-    margin-bottom: 10vh;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+
+    #container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+
+        #title {
+            font-size: 4vw;
+            font-family: "Montserrat", sans-serif;
+            font-weight: bold;
+            margin: 0;
+            width: 100%;
+            text-align: center;
+        }
+
+        #subtitle {
+            font-size: 2vw;
+            font-family: "Montserrat", sans-serif;
+            font-weight: 300;
+            margin: 0;
+            width: 100%;
+            text-align: center;
+        }
+
+        #contact-info {
+            display: flex;
+            grid-template-columns: 1fr 1fr;
+            justify-items: center;
+            grid-gap: 8vh;
+            width: 70%;
+            margin: 5vh;
+            padding: 0;
+            height: min-content;
+            align-items: center;
+
+            input {
+                font-size: 1.5vw;
+                font-family: "Montserrat", sans-serif;
+                font-weight: 400;
+                margin: 0;
+                width: 20vw;
+                height: 5vh;
+                text-align: center;
+                border: none;
+                border-radius: 10px;
+                box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+            }
+        }
+
+        textarea {
+            font-size: 1.5vw;
+            font-family: "Montserrat", sans-serif;
+            font-weight: 400;
+            margin: 5vh;
+            width: 40vw;
+            height: 20vh;
+            text-align: left;
+            padding: 1vh 1vw;
+            border: none;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            resize: none;
+        }
+
+        button {
+            font-size: 1.5vw;
+            font-family: "Montserrat", sans-serif;
+            font-weight: bold;
+            margin: 5vwe;
+            width: 20vw;
+            height: 10vh;
+            text-align: center;
+            padding: 1vh 2vw;
+            border-radius: 100px;
+            background-color: #ff3300;
+            color: #ffffff;
+            border: none;
+            transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+
+            &:hover {
+                background-color: #000;
+                color: #f8f8f8;
+            }
+        }
+    }
 }
