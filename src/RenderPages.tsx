@@ -3,8 +3,10 @@ import { BrowserRouter as Router, Routes as Pathhub, Route as Path, Navigate as 
 import MainPage from './pages/index.tsx';
 
 // SCSS
-import './assets/scss/mainpage.scss';
+import './assets/scss/pages/mainpage.scss';
+
 import OurTeamsPage from './pages/ourteams.tsx';
+import WhatWeDoPage from './pages/whatwedo.tsx';
 
 // Pages
 
@@ -21,6 +23,7 @@ const RenderPages: React.FC = (): React.JSX.Element => {
                 {/* Paths */}
                 <Path path="/" element={<MainPage />} />
                 <Path path="/our-teams" element={<OurTeamsPage />} />
+                <Path path="/what-we-do" element={<WhatWeDoPage />} />
             </Pathhub>
         </Router>
     )

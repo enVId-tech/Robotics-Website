@@ -1,5 +1,13 @@
 import React from "react";
 import '../../scss/sections/Sponsors.scss';
+import nasa from "../../assets/new-img/NASA.png";
+import disney from "../../assets/new-img/Disney.jpeg";
+import genehaas from "../../assets/new-img/GeneHaas.webp";
+import solidworks from "../../assets/new-img/Solidworks.png";
+import msi from "../../assets/new-img/MSI.png";
+import argosy from "../../assets/new-img/ArgosyFoundation.jpeg";
+import goengineer from "../../assets/new-img/GoEngineer.jpeg";
+import emerson from "../../assets/new-img/Emerson.jpeg";
 
 const Sponsors: React.FC = (): React.JSX.Element => {
     const mailRedirect = (): void => {
@@ -24,8 +32,10 @@ const Sponsors: React.FC = (): React.JSX.Element => {
                         <h1 id="title">Platinum</h1>
 
                         <div id="platinum-sponsors">
-                            <img src="https://via.placeholder.com/300" alt="sponsor" />
-                            <img src="https://via.placeholder.com/300" alt="sponsor" />
+                            <img src={nasa} alt="sponsor" />
+                            <img src={disney} alt="sponsor" />
+                            <img src={genehaas} alt="sponsor" />
+                            <img src={solidworks} alt="sponsor" />
                         </div>
                     </div>
 
@@ -42,8 +52,8 @@ const Sponsors: React.FC = (): React.JSX.Element => {
                         <h1 id="title">Silver</h1>
 
                         <div id="silver-sponsors">
-                            <img src="https://via.placeholder.com/300" alt="sponsor" />
-                            <img src="https://via.placeholder.com/300" alt="sponsor" />
+                            <img src={msi} alt="sponsor" />
+                            <img src={argosy} alt="sponsor" />
                         </div>
                     </div>
 
@@ -51,8 +61,8 @@ const Sponsors: React.FC = (): React.JSX.Element => {
                         <h1 id="title">Bronze</h1>
 
                         <div id="bronze-sponsors">
-                            <img src="https://via.placeholder.com/300" alt="sponsor" />
-                            <img src="https://via.placeholder.com/300" alt="sponsor" />
+                            <img src={goengineer} alt="sponsor" />
+                            <img src={emerson} alt="sponsor" />
                         </div>
                     </div>
                 </div>

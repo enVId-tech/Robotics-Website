@@ -1,5 +1,5 @@
 import React from "react";
-import '../../scss/sections/Teams.scss';
+import '../../scss/pages/teamspage.scss';
 import FRC from '../../assets/new-img/logos/FRC.png';
 import FTC from '../../assets/new-img/logos/FTC.png';
 import VRC from '../../assets/new-img/logos/VRC.png';

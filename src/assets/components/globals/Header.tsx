@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import React from 'react';
-import '../../scss/Header.scss';
+import '../../scss/globals/Header.scss';
 // const img = require('../../assets/img/logo/logosmall.png');
 import img from '../../assets/img/logo/logosmall.png';
 
