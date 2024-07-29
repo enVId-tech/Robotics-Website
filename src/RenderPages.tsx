@@ -20,7 +20,7 @@ const RenderPages: React.FC = (): React.JSX.Element => {
 
                 {/* Paths */}
                 <Path path="/" element={<MainPage />} />
-                <Path path="/teams" element={<OurTeamsPage />} />
+                <Path path="/our-teams" element={<OurTeamsPage />} />
             </Pathhub>
         </Router>
     )

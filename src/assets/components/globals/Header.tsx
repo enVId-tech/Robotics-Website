@@ -14,8 +14,8 @@ const Header: React.FC = (): React.JSX.Element => {
         // exclude the header section and the footer section
         setSections(document.querySelectorAll('section').length > 0 ? Array.from(document.querySelectorAll('section')).map((section: Element) => section.id).filter((section: string) => section !== 'header' && section !== 'footer') : []);
         console.log(sections);
+        setSectionIDs(['home', 'about', 'what-we-do', 'our-teams', 'impact', 'sponsors', 'our-robots', 'contact']);
         setHeaderTitles(['Home', 'About', 'What we do', 'Our teams', 'Impact', 'Sponsors', 'Our Robots', 'Contact']);
-        setSectionIDs(Array.from(document.querySelectorAll('section')).map(section => section.id));
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
@@ -44,7 +44,7 @@ const Header: React.FC = (): React.JSX.Element => {
                         {
                             headerTitles.map((title: string, index: number) => {
                                 return (
-                                    <a href={`/#${title}`} className={`HeaderButton`} key={index}>
+                                    <a href={`/${sectionIDs[index]}`} className={`HeaderButton`} key={index}>
                                         <h1 className={`${sectionIDs[index] === currentSection ? 'active' : ''}`}>{title}</h1>
                                     </a>
                                 )
