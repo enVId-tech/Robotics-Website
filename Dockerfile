@@ -1,11 +1,9 @@
-FROM node:18-alpine
+FROM node:lts
 
-WORKDIR /react-docker/
+WORKDIR /docker-react
 
-COPY public/ /react-docker/public
-COPY src/ /react-docker/src
-COPY package.json /react-docker/
+COPY . /docker-react
 
 RUN npm install
 
-RUN npm run dev
+RUN npm run start

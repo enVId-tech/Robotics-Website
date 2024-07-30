@@ -8,6 +8,7 @@ import WhatWeDo from '../assets/components/sections/WhatWeDo.tsx'
 import Impact from '../assets/components/sections/Impact.tsx'
 import Sponsors from '../assets/components/sections/Sponsors.tsx'
 import Contact from '../assets/components/sections/Contact.tsx'
+import Signup from '../assets/components/sections/Signup.tsx'
 
 const MainPage: React.FC = (): React.JSX.Element => {
     return (
@@ -22,6 +23,7 @@ const MainPage: React.FC = (): React.JSX.Element => {
             <Impact />
             <Sponsors />
             <Robots />
+            <Signup />
             <Contact />
 
             {/* Bottom of Page */}

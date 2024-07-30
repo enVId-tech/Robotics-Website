@@ -1,7 +1,7 @@
 import React from "react";
 import '../../scss/sections/WhatWeDo.scss';
 
-const imgNames: string[] = ["robotics_working", "marketing_working", "competition_working"];
+// const imgNames: string[] = ["robotics_working", "marketing_working", "competition_working"];
 
 const WhatWeDo: React.FC = (): React.JSX.Element => {
     return (

@@ -79,7 +79,6 @@
             font-size: 1.5vw;
             font-family: "Montserrat", sans-serif;
             font-weight: bold;
-            margin: 5vwe;
             width: 20vw;
             height: 10vh;
             text-align: center;
@@ -88,7 +87,8 @@
             background-color: #ff3300;
             color: #ffffff;
             border: none;
-            transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+            transition: all 0.5s ease-in-out, color 0.5s ease-in-out;
+            cursor: pointer;
 
             &:hover {
                 background-color: #000;
