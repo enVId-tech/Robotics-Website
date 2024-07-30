@@ -1,5 +1,6 @@
 import React from "react";
 import '../../scss/sections/Impact.scss';
+import collage from '../../assets/img/about/collage.png';
 
 interface Info {
     image?: string;
@@ -54,9 +55,7 @@ const Impact: React.FC = (): React.JSX.Element => {
                     </div>
                 </div>
                 <div id="right">
-                    <img src="https://via.placeholder.com/300" alt="Impact" />  
-                    <img src="https://via.placeholder.com/300" alt="Impact" />
-                    <img src="https://via.placeholder.com/300" alt="Impact" />
+                    <img src={collage} alt="Impact" />  
                 </div>
             </div>
         </section>

@@ -1,5 +1,6 @@
 import React from "react";
 import '../../scss/sections/About.scss';
+import img from '../../assets/img/counter-up/collage2.png'
 
 interface Descriptor {
     title: string;
@@ -62,9 +63,7 @@ const About: React.FC = (): React.JSX.Element => {
         <section id="about">
             <div id="container">
                 <div id="left">
-                    <img src="https://via.placeholder.com/200" alt="About" />
-                    <img src="https://via.placeholder.com/200" alt="About" />
-                    <img src="https://via.placeholder.com/200" alt="About" />
+                    <img src={img} alt="About" />
                 </div>
                 <div id="right">
                     <div id="top">

@@ -43,16 +43,13 @@ const Sponsors: React.FC = (): React.JSX.Element => {
                         <h1 id="title">Gold</h1>
 
                         <div id="gold-sponsors">
-                            <img src="https://via.placeholder.com/300" alt="sponsor" />
-                            <img src="https://via.placeholder.com/300" alt="sponsor" />
-                        </div>
+                            <img src={msi} alt="sponsor" />                        </div>
                     </div>
 
                     <div id="silver">
                         <h1 id="title">Silver</h1>
 
                         <div id="silver-sponsors">
-                            <img src={msi} alt="sponsor" />
                             <img src={argosy} alt="sponsor" />
                         </div>
                     </div>
@@ -63,6 +60,17 @@ const Sponsors: React.FC = (): React.JSX.Element => {
                         <div id="bronze-sponsors">
                             <img src={goengineer} alt="sponsor" />
                             <img src={emerson} alt="sponsor" />
+                        </div>
+                    </div>
+                    <div id="extras">
+                        <h1 id="title">Other Sponsors</h1>
+
+                        <div id="extra-sponsors">
+                            <p>Alonso Family</p>
+                            <p>Stephan Family</p>
+                            <p>Jang Family</p>
+                            <p>Li Family</p>
+                            <p>Anaheim Union High School District</p>
                         </div>
                     </div>
                 </div>

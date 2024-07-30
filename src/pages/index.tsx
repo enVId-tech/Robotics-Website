@@ -7,7 +7,6 @@ import Robots from '../assets/components/sections/Robots.tsx'
 import WhatWeDo from '../assets/components/sections/WhatWeDo.tsx'
 import Impact from '../assets/components/sections/Impact.tsx'
 import Sponsors from '../assets/components/sections/Sponsors.tsx'
-import Feed from '../assets/components/sections/Feed.tsx'
 import Contact from '../assets/components/sections/Contact.tsx'
 
 const MainPage: React.FC = (): React.JSX.Element => {
@@ -21,7 +20,6 @@ const MainPage: React.FC = (): React.JSX.Element => {
             <About />
             <WhatWeDo />
             <Impact />
-            <Feed />
             <Sponsors />
             <Robots />
             <Contact />
