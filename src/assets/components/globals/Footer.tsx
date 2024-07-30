@@ -11,38 +11,56 @@ const Footer: React.FC = (): React.JSX.Element => {
         <section id="footer">
             <div id="container">
                 <div id="footer-content">
-                    <div id="footer-logo">
-                        <img src={logo} alt="Logo" />
-                    </div>
-                    <div id="footer-links">
-                        <h1 id="title">Navigate</h1>
-                        <div id="links">
-                            <a href="/">Home</a>
-                            <a href="/ourteams">Our Teams</a>
-                            <a href="/whatwedo">What We Do</a>
-                            <a href="/contact">Contact</a>
+                    <div id="footer-top">
+                        <div id="footer-logo">
+                            <img src={logo} alt="Logo" />
+                            <p id="slogan">We are OA Robotics.</p>
+                            <span id="socials">
+                                <a href="https://www.instagram.com/frc4079/" target="_blank" rel="noreferrer">
+                                    <i className="fab fa-instagram" />
+                                </a>
+                                <a href="https://www.youtube.com/channel/UC6w3z1tXn0lZpL5h9nQ8r9w" target="_blank" rel="noreferrer">
+                                    <i className="fab fa-youtube" />
+                                </a>
+                                <a href="https://www.facebook.com/frc4079" target="_blank" rel="noreferrer">
+                                    <i className="fab fa-facebook" />
+                                </a>
+                            </span>
                         </div>
-                    </div>
-                    <div id="footer-services">
-                        <h1 id="title">Services</h1>
-                        <div id="services">
-                            <a href="/inform">Inform</a>
-                            <a href="/build">Build</a>
-                            <a href="/compete">Compete</a>
-                        </div>
-                    </div>
-
-                    <div id="footer-contact">
-                        <h1 id="title">Contact</h1>
-                        <div id="contact">
-                            <p onClick={() => mailRedirect()}>contact@frc4079.org</p>
-                            <p id="org">Oxford Academy Robotics</p>
-                            <p id="address">5172 Orange Ave | Room 701</p>
-                            <p id="city">Cypress, CA 90630</p>
-                            <div id="gmaps">
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3314.5570812972687!2d-118.04453358530705!3d33.8237414371854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dd2e98997e6095%3A0xf86122ccefa379ec!2sOxford%20Academy!5e0!3m2!1sen!2sus!4v1643523895668!5m2!1sen!2sus" width="300" height="180" loading="lazy" />
+                        <div id="footer-links">
+                            <h1 id="title">Navigate</h1>
+                            <div id="links">
+                                <a href="/">Home</a>
+                                <a href="/ourteams">Our Teams</a>
+                                <a href="/whatwedo">What We Do</a>
+                                <a href="/contact">Contact</a>
                             </div>
                         </div>
+                        <div id="footer-services">
+                            <h1 id="title">Services</h1>
+                            <div id="services">
+                                <a href="/inform">Inform</a>
+                                <a href="/build">Build</a>
+                                <a href="/compete">Compete</a>
+                            </div>
+                        </div>
+
+                        <div id="footer-contact">
+                            <h1 id="title">Contact</h1>
+                            <div id="contact">
+                                <p onClick={() => mailRedirect()}>contact@frc4079.org</p>
+                                <p id="org">Oxford Academy Robotics</p>
+                                <p id="address">5172 Orange Ave | Room 701</p>
+                                <p id="city">Cypress, CA 90630</p>
+                                <div id="gmaps">
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3314.5570812972687!2d-118.04453358530705!3d33.8237414371854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dd2e98997e6095%3A0xf86122ccefa379ec!2sOxford%20Academy!5e0!3m2!1sen!2sus!4v1643523895668!5m2!1sen!2sus" width="300" height="180" loading="lazy" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr />
+                    <div id="footer-bottom">
+                        <h1 id="title">Developed by Oxford Academy Robotics</h1>
                     </div>
                 </div>
             </div>
